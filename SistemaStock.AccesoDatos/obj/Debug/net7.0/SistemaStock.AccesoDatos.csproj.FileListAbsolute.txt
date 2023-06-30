@@ -1,0 +1,17 @@
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.AccesoDatos.deps.json
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.AccesoDatos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.AccesoDatos.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.Modelos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.Utilidades.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.Modelos.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\bin\Debug\net7.0\SistemaStock.Utilidades.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.AssemblyInfo.cs
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.csproj.CopyComplete
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\refint\SistemaStock.AccesoDatos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\SistemaStock.AccesoDatos.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.AccesoDatos\obj\Debug\net7.0\ref\SistemaStock.AccesoDatos.dll

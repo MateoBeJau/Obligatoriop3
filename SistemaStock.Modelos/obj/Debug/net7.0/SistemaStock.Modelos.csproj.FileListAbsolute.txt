@@ -1,0 +1,15 @@
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\bin\Debug\net7.0\SistemaStock.Modelos.deps.json
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\bin\Debug\net7.0\SistemaStock.Modelos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\bin\Debug\net7.0\SistemaStock.Modelos.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\bin\Debug\net7.0\SistemaStock.Utilidades.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\bin\Debug\net7.0\SistemaStock.Utilidades.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.csproj.AssemblyReference.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.AssemblyInfoInputs.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.AssemblyInfo.cs
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.csproj.CoreCompileInputs.cache
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.csproj.CopyComplete
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\refint\SistemaStock.Modelos.dll
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\SistemaStock.Modelos.pdb
+C:\Users\mateo\Desktop\Obligatorio\SistemaStock\SistemaStock.Modelos\obj\Debug\net7.0\ref\SistemaStock.Modelos.dll
