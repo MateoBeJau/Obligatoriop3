@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bPZoeuVxPA6KASAUVNBuHVOeGGLCOlHpHM6aE5/mxvI=",
+  "Hash": "obL3j9mrPIRaIFkc+vuWxOoTfljZIb/IeTWKObcUscU=",
   "Source": "SistemaStock",
   "BasePath": "_content/SistemaStock",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\JavaScript.js",
+      "SourceId": "SistemaStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\",
+      "BasePath": "_content/SistemaStock",
+      "RelativePath": "js/JavaScript.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
     },
     {
       "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\site.js",
