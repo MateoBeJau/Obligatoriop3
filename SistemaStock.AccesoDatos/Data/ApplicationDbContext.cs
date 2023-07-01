@@ -13,6 +13,7 @@ namespace SistemaStock.AccesoDatos.Data
         }
 
         public DbSet<Economato> Economato { get; set; }
+        public DbSet<Categoria> Categoria { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

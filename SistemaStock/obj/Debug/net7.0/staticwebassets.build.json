@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "obL3j9mrPIRaIFkc+vuWxOoTfljZIb/IeTWKObcUscU=",
+  "Hash": "pNLja56m1ABouw2sI8KXuErsgmbGSMJG3xyrQQbhqz8=",
   "Source": "SistemaStock",
   "BasePath": "_content/SistemaStock",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\categoria.js",
+      "SourceId": "SistemaStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\",
+      "BasePath": "_content/SistemaStock",
+      "RelativePath": "js/categoria.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\categoria.js"
     },
     {
       "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\JavaScript.js",

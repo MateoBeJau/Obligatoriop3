@@ -9,6 +9,7 @@ namespace SistemaStock.AccesoDatos.Repositorio.IRepositorio
     public interface IUnidadTrabajo :IDisposable
     {
         IEconomatoRepositorio Economato { get; }
+        ICategoriaRepositorio Categoria { get; }
 
         Task Save();
     }

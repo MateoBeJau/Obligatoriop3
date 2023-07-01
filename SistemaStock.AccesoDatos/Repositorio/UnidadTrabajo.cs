@@ -14,11 +14,13 @@ namespace SistemaStock.AccesoDatos.Repositorio
         private readonly ApplicationDbContext _db;
 
         public IEconomatoRepositorio Economato { get; private set; }
+        public ICategoriaRepositorio Categoria { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Economato = new EconomatoRepositorio(_db);
+            Categoria = new CategoriaRepositorio(_db);
         }
 
 
