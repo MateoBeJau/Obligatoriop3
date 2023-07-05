@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pNLja56m1ABouw2sI8KXuErsgmbGSMJG3xyrQQbhqz8=",
+  "Hash": "uY2tq2QODXSPjZmBgeXURE+7wgBRY34xuqIe5tgKilk=",
   "Source": "SistemaStock",
   "BasePath": "_content/SistemaStock",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\JavaScript.js"
+    },
+    {
+      "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\Marca.js",
+      "SourceId": "SistemaStock",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\",
+      "BasePath": "_content/SistemaStock",
+      "RelativePath": "js/Marca.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Marca.js"
     },
     {
       "Identity": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock\\wwwroot\\js\\site.js",

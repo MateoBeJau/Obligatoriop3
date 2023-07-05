@@ -15,12 +15,14 @@ namespace SistemaStock.AccesoDatos.Repositorio
 
         public IEconomatoRepositorio Economato { get; private set; }
         public ICategoriaRepositorio Categoria { get; private set; }
+        public IMarcaRepositorio Marca { get; private set; }
 
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
             Economato = new EconomatoRepositorio(_db);
             Categoria = new CategoriaRepositorio(_db);
+            Marca = new MarcaRepositorio(_db);
         }
 
 

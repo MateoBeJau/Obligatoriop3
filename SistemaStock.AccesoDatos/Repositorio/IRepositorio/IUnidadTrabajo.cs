@@ -10,6 +10,7 @@ namespace SistemaStock.AccesoDatos.Repositorio.IRepositorio
     {
         IEconomatoRepositorio Economato { get; }
         ICategoriaRepositorio Categoria { get; }
+        IMarcaRepositorio Marca { get; }
 
         Task Save();
     }
