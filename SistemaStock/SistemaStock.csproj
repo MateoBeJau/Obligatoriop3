@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\imagenes\producto\2ea438af-0b7d-4cdf-855e-16fcea059c7f.jpeg" />
     <Content Remove="wwwroot\js\economato.js" />
   </ItemGroup>
 
@@ -27,6 +28,10 @@
     <ProjectReference Include="..\SistemaStock.AccesoDatos\SistemaStock.AccesoDatos.csproj" />
     <ProjectReference Include="..\SistemaStock.Modelos\SistemaStock.Modelos.csproj" />
     <ProjectReference Include="..\SistemaStock.Utilidades\SistemaStock.Utilidades.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\imagenes\producto\" />
   </ItemGroup>
 
 </Project>

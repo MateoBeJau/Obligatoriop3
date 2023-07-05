@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using SistemaStock.Modelos;
 using System.Reflection;
 
@@ -15,6 +16,8 @@ namespace SistemaStock.AccesoDatos.Data
         public DbSet<Economato> Economato { get; set; }
         public DbSet<Categoria> Categoria { get; set; }
         public DbSet<Marca> Marca { get; set; }
+
+        public DbSet<Producto> Producto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

@@ -302,6 +302,59 @@ namespace SistemaStock.AccesoDatos.Migrations
                     b.ToTable("Marca");
                 });
 
+            modelBuilder.Entity("SistemaStock.Modelos.Producto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoriaId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Costo")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Descripcion")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<bool>("Estado")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ImagenUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MarcaId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Moneda")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("NumeroProducto")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<int?>("PadreId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("Precio")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoriaId");
+
+                    b.HasIndex("MarcaId");
+
+                    b.HasIndex("PadreId");
+
+                    b.ToTable("Producto");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -351,6 +404,32 @@ namespace SistemaStock.AccesoDatos.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("SistemaStock.Modelos.Producto", b =>
+                {
+                    b.HasOne("SistemaStock.Modelos.Categoria", "Categoria")
+                        .WithMany()
+                        .HasForeignKey("CategoriaId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("SistemaStock.Modelos.Marca", "Marca")
+                        .WithMany()
+                        .HasForeignKey("MarcaId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("SistemaStock.Modelos.Producto", "Padre")
+                        .WithMany()
+                        .HasForeignKey("PadreId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("Categoria");
+
+                    b.Navigation("Marca");
+
+                    b.Navigation("Padre");
                 });
 #pragma warning restore 612, 618
         }
