@@ -12,5 +12,7 @@ namespace SistemaStock.Utilidades
         public const string Error = "Error";
 
         public const string ImagenRut = @"\imagenes\producto\";
+
+
     }
 }

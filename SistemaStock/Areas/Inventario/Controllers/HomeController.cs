@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
+using SistemaStock.Modelos;
 using SistemaStock.Modelos.ErrorViewModels;
 using SistemaStock.Modelos.ViewModels;
 
@@ -10,15 +12,18 @@ namespace SistemaStock.Areas.Inventario.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnidadTrabajo _unidadTrabajo;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger,IUnidadTrabajo unidadTrabajo)
         {
             _logger = logger;
+            _unidadTrabajo = unidadTrabajo;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            IEnumerable<Producto> productoLista =  await _unidadTrabajo.Producto.GetAll();
+            return View(productoLista);
         }
 
         public IActionResult Privacy()
