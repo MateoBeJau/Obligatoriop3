@@ -19,6 +19,8 @@ namespace SistemaStock.AccesoDatos.Data
 
         public DbSet<Producto> Producto { get; set; }
 
+        public DbSet<UsuarioAplicacion> Usuario { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

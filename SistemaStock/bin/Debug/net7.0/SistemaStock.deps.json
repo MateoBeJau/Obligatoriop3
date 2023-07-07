@@ -2847,6 +2847,7 @@
       "SistemaStock.Modelos/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
+          "Microsoft.Extensions.Identity.Stores": "7.0.8",
           "SistemaStock.Utilidades": "1.0.0"
         },
         "runtime": {
