@@ -2855,6 +2855,9 @@
         }
       },
       "SistemaStock.Utilidades/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.UI": "7.0.8"
+        },
         "runtime": {
           "SistemaStock.Utilidades.dll": {}
         }

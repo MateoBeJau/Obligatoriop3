@@ -1,8 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "DTBjV+cRKYZavsFF3zoQ8BLQbjrD1VJYWAedP1UFacfF8KYBQOF6lZsn+u8GmJ9RPoMSfmL6sI/F9qpIU0eqXw==",
+  "dgSpecHash": "Swrlh8Me7yUzV6XjIccZx4z9r08VCFY9HIpHw746dkPFRGO2xlGrAdNzO/JezQJ4bQpZWBG1sq1EvRtDqQiGvw==",
   "success": true,
   "projectFilePath": "C:\\Users\\mateo\\Desktop\\Obligatorio\\SistemaStock\\SistemaStock.Utilidades\\SistemaStock.Utilidades.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.8\\microsoft.aspnetcore.cryptography.internal.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.8\\microsoft.aspnetcore.cryptography.keyderivation.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.8\\microsoft.aspnetcore.identity.ui.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\7.0.0\\microsoft.extensions.fileproviders.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\7.0.8\\microsoft.extensions.fileproviders.embedded.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.identity.core\\7.0.8\\microsoft.extensions.identity.core.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.identity.stores\\7.0.8\\microsoft.extensions.identity.stores.7.0.8.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\mateo\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
