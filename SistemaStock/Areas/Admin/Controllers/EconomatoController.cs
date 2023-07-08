@@ -1,12 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
 using SistemaStock.Modelos;
 using SistemaStock.Utilidades;
+using System.Data;
 
 namespace SistemaStock.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = DS.RoleAdmin)]
+
     public class EconomatoController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

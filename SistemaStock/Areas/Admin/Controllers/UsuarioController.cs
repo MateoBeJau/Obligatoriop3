@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SistemaStock.AccesoDatos.Data;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
+using SistemaStock.Utilidades;
+using System.Data;
 
 namespace SistemaStock.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = DS.RoleAdmin)]
+
     public class UsuarioController : Controller
     {
 

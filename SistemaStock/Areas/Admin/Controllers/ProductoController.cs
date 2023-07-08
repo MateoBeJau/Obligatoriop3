@@ -1,13 +1,18 @@
-﻿ using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
 using SistemaStock.Modelos;
 using SistemaStock.Modelos.ViewModels;
 using SistemaStock.Utilidades;
+using System.Data;
 
 namespace SistemaStock.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles = DS.RoleAdmin + "," + DS.RoleInventario)]
+
+
     public class ProductoController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;

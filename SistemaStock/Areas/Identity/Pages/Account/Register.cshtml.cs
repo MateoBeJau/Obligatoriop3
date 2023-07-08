@@ -209,6 +209,15 @@ namespace SistemaStock.Areas.Identity.Pages.Account
                         
                     }
                 }
+                Input = new InputModel()
+                {
+                    ListaRol = _roleManager.Roles.Select(n => n.Name).Select(l => new SelectListItem
+                    {
+                        Text = l,
+                        Value = l
+                    })
+                };
+
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);

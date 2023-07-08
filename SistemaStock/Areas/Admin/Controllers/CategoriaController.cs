@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
 using SistemaStock.Modelos;
 using SistemaStock.Utilidades;
@@ -7,6 +8,7 @@ namespace SistemaStock.Areas.Admin.Controllers
 {
 
     [Area("Admin")]
+    [Authorize(Roles =DS.RoleAdmin)]
     public class CategoriaController : Controller
     {
         private readonly IUnidadTrabajo _unidadTrabajo;
