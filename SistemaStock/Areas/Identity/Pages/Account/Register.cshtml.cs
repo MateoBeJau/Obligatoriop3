@@ -118,7 +118,7 @@ namespace SistemaStock.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
             Input = new InputModel()
             {
-                ListaRol = _roleManager.Roles.Where(r=>r.Name!=DS.RoleCliente).Select(n=>n.Name).Select(l=> new SelectListItem
+                ListaRol = _roleManager.Roles.Select(n=>n.Name).Select(l=> new SelectListItem
                 {
                     Text = l,
                     Value = l
@@ -168,7 +168,14 @@ namespace SistemaStock.Areas.Identity.Pages.Account
                         await _roleManager.CreateAsync(new IdentityRole(DS.RoleInventario));
                     }
 
-                    await _userManager.AddToRoleAsync(user, DS.RoleAdmin);
+                    if(user.Role == null) //El valor que recibe es desde el Page Rol cliente
+                    {
+                        await _userManager.AddToRoleAsync(user, DS.RoleCliente);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, user.Role);
+                    }
 
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -189,8 +196,17 @@ namespace SistemaStock.Areas.Identity.Pages.Account
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        if (user.Role == null)
+                        {
+                            await _signInManager.SignInAsync(user, isPersistent: false);
+                            return LocalRedirect(returnUrl);
+                        }
+                        else
+                        {
+                            //Administrador registra nuevo usuario
+                            return RedirectToAction("Index", "Usuario", new { Area = "Admin" });
+                        }
+                        
                     }
                 }
                 foreach (var error in result.Errors)
