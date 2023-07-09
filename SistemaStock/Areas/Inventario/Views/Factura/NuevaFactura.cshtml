@@ -1,0 +1,47 @@
+﻿@model SistemaStock.Modelos.ViewModels.FacturaVM
+@{
+    ViewData["Title"] = "NuevaFactura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var titulo = "Cargar Factura";
+}
+
+<form method="post">
+    <div class="ps-5 pe-5 pb-5">
+        <div class="row border-0">
+            <div asp-validation-summary="ModelOnly" class="text-danger">
+
+            </div>
+
+            @*Campos que ya son inicializado y no queremos mostrar*@
+            <input asp-for="Factura.Estado" hidden />
+            <input asp-for="Factura.UsuarioAplicacionId" hidden />
+            <input asp-for="Factura.FechaFactura" hidden />
+
+            <div class="col-12 border-bottom p-0" >
+                <h2 class="text-primary">@titulo</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <label>Valija</label>
+                    <select asp-for="Factura.EconomatoId" asp-items="@Model.EconomatoLista" class="form-select">
+                        <option disabled selected>--Seleccione una valija</option>
+                        <span asp-validation-for="Factura.EconomatoId" class="text-danger"></span>
+                    </select>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-block mt-2">
+                <button type="submit" class="btn btn-primary">Continuar</button>
+                <a asp-action="Index" class="btn btn-success">Salir</a>
+            </div>
+
+
+        </div>
+    </div>
+
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}

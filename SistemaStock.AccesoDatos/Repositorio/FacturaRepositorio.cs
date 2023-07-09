@@ -19,6 +19,18 @@ namespace SistemaStock.AccesoDatos.Repositorio
             _db = db;
         }
 
+        public IEnumerable<SelectListItem> GetAllDropdownList(string obj)
+        {
+            if(obj == "Economato")
+            {
+                return _db.Economato.Where(b => b.Estado == true).Select(b => new SelectListItem
+                {
+                    Text = b.Nombre,
+                    Value = b.Id.ToString()
+                }); ;
+            }
+            return null;
+        }
 
         public void Update(Factura factura)
         {

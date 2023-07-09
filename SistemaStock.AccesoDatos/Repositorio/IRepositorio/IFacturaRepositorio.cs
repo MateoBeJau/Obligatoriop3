@@ -12,6 +12,6 @@ namespace SistemaStock.AccesoDatos.Repositorio.IRepositorio
     {
         void Update(Factura factura);
 
-        //IEnumerable<SelectListItem> GetAllDropdownList(string obj);
+        IEnumerable<SelectListItem> GetAllDropdownList(string obj);
     }
 }
