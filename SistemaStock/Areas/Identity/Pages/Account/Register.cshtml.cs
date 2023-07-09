@@ -179,6 +179,9 @@ namespace SistemaStock.Areas.Identity.Pages.Account
 
 
                     var userId = await _userManager.GetUserIdAsync(user);
+
+                    //Esto es para confirmacion de usuarios por medio del email
+
                     //var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     //code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
                     //var callbackUrl = Url.Page(

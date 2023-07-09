@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace SistemaStock.AccesoDatos.Repositorio.IRepositorio
 {
-    public interface IUnidadTrabajo :IDisposable
+    public interface IUnidadTrabajo : IDisposable
     {
         IEconomatoRepositorio Economato { get; }
         ICategoriaRepositorio Categoria { get; }
         IMarcaRepositorio Marca { get; }
         IProductoRepositorio Producto { get; }
-        IUsuarioAplicacionRepositorio UsuarioAplicacion { get; }
+        IUsuarioAplicacionRepositorio UsuarioAplicacion { get; } 
+        IEconomatoProductoRepositorio EconomatoProducto { get; }
+
+        IFacturaRepositorio Factura { get; }
+
+        ILineaFacturaRepositorio LineaFactura { get; }
 
         Task Save();
     }

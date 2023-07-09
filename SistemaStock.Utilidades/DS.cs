@@ -16,7 +16,5 @@ namespace SistemaStock.Utilidades
         public const string RoleAdmin = "Admin";
         public const string RoleCliente = "Cliente";
         public const string RoleInventario = "Inventario";
-
-
     }
 }

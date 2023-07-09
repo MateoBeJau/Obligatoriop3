@@ -21,6 +21,12 @@ namespace SistemaStock.AccesoDatos.Repositorio
 
         public IUsuarioAplicacionRepositorio UsuarioAplicacion { get; private set; }
 
+        public IEconomatoProductoRepositorio EconomatoProducto { get; private set; }
+
+        public IFacturaRepositorio Factura { get; private set; }
+
+        public ILineaFacturaRepositorio LineaFactura { get; private set; }
+
         public UnidadTrabajo(ApplicationDbContext db)
         {
             _db = db;
@@ -29,6 +35,10 @@ namespace SistemaStock.AccesoDatos.Repositorio
             Marca = new MarcaRepositorio(_db);
             Producto = new ProductoRepositorio(_db);
             UsuarioAplicacion = new UsuarioAplicacionRepositorio(_db);
+            EconomatoProducto = new EconomatoProductoRepositorio(_db);
+            Factura = new FacturaRepositorio(_db);
+            LineaFactura = new LineaFacturaRepositorio(_db);
+
         }
 
 

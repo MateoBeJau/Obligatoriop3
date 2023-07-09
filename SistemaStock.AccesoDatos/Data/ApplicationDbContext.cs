@@ -21,6 +21,13 @@ namespace SistemaStock.AccesoDatos.Data
 
         public DbSet<UsuarioAplicacion> Usuario { get; set; }
 
+        public DbSet<EconomatoProducto> EconomatoProducto { get; set; }
+
+        public DbSet<Factura> Factura { get; set; }
+
+        public DbSet<LineaFactura> LineaFactura { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
