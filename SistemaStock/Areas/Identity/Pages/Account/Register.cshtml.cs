@@ -18,6 +18,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Logging;
 using SistemaStock.Modelos;
 using SistemaStock.Utilidades;
@@ -133,11 +134,12 @@ namespace SistemaStock.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            if (ModelState.IsValid)
+
+            if (ModelState.IsValid )
             {
                 //var user = CreateUser();
-
                 var user = new UsuarioAplicacion
+
                 {
                     UserName = Input.Email,
                     Email = Input.Email,

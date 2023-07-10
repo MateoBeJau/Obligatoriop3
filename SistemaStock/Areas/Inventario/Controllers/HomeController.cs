@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
+using Newtonsoft.Json;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
 using SistemaStock.Modelos;
 using SistemaStock.Modelos.ErrorViewModels;
@@ -14,22 +16,36 @@ namespace SistemaStock.Areas.Inventario.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IUnidadTrabajo _unidadTrabajo;
 
+
         public HomeController(ILogger<HomeController> logger,IUnidadTrabajo unidadTrabajo)
         {
             _logger = logger;
             _unidadTrabajo = unidadTrabajo;
-        }
 
+        }
         public async Task<IActionResult> Index()
+        {
+            Api cotizacion = new Api();
+            string resultado = cotizacion.GetCotizacion("2754ab043aeb1bd0702bf8d166baf836");
+            var retornoCotizacion = JsonConvert.DeserializeObject<Cotizacion>(resultado).Quotes["USDUYU"];
+            ViewData["Cotizacion"] = retornoCotizacion;
+
+            return View(retornoCotizacion);
+        }
+        public async Task<IActionResult> Privacy()
         {
             IEnumerable<Producto> productoLista =  await _unidadTrabajo.Producto.GetAll();
             return View(productoLista);
         }
 
-        public IActionResult Privacy()
+        public async Task<IActionResult> Detalle(int id)
         {
+
+
             return View();
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
