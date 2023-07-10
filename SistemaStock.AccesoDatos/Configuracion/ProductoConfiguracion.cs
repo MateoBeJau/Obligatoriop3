@@ -23,6 +23,8 @@ namespace SistemaStock.AccesoDatos.Configuracion
             builder.Property(x => x.CategoriaId).IsRequired();
             builder.Property(x => x.MarcaId).IsRequired();
             builder.Property(x => x.ImagenUrl).IsRequired(false);
+            builder.Property(x => x.ImagenUrlDos).IsRequired(false);
+            builder.Property(x => x.ImagenUrlTres).IsRequired(false);
             builder.Property(x => x.PadreId).IsRequired(false);
             builder.Property(x=>x.Estado).IsRequired();
 

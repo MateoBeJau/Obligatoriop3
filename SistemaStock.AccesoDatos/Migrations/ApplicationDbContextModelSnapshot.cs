@@ -416,6 +416,12 @@ namespace SistemaStock.AccesoDatos.Migrations
                     b.Property<string>("ImagenUrl")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImagenUrlDos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagenUrlTres")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("MarcaId")
                         .HasColumnType("int");
 

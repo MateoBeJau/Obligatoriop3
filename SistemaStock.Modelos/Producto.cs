@@ -28,6 +28,8 @@ namespace SistemaStock.Modelos
         public double Costo { get; set; }
 
         public string ImagenUrl { get; set; }
+        public string ImagenUrlDos { get; set; }
+        public string ImagenUrlTres { get; set; }
 
         [Required(ErrorMessage = "Moneda de Producto requerido")]
 

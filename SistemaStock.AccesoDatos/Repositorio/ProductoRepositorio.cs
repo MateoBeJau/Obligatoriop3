@@ -50,6 +50,14 @@ namespace SistemaStock.AccesoDatos.Repositorio
                 {
                     producto.ImagenUrl = productoDb.ImagenUrl;
                 }
+                if (producto.ImagenUrlDos != null)
+                {
+                    producto.ImagenUrlDos = productoDb.ImagenUrlDos;
+                }
+                if (producto.ImagenUrlTres != null)
+                {
+                    producto.ImagenUrlTres = productoDb.ImagenUrlTres;
+                }
                 productoDb.NumeroProducto = producto.NumeroProducto;
                 productoDb.Descripcion = producto.Descripcion;
                 productoDb.Precio = producto.Precio;

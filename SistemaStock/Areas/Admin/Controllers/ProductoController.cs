@@ -67,41 +67,73 @@ namespace SistemaStock.Areas.Admin.Controllers
             {
                 var files = HttpContext.Request.Form.Files;
                 string webRootPath = _webHostEnvironment.WebRootPath;
-                if(productoVM.Producto.Id == 0)
-                {
-                    //Crear Producto
-                    string upload = webRootPath + DS.ImagenRut;
-                    string fileName = Guid.NewGuid().ToString();
-                    string extension = Path.GetExtension(files[0].FileName);
 
-                    using (var fileStream = new FileStream(Path.Combine(upload, fileName + extension), FileMode.Create))
+
+                if (productoVM.Producto.Id == 0 && files.Count >= 3) //Crear producto
+                {
+                    for (int i = 0; i < 3; i++)
                     {
-                        files[0].CopyTo(fileStream);
+                        string upLoad = webRootPath + DS.ImagenRut;
+                        string fileName = Guid.NewGuid().ToString();
+                        string extension = Path.GetExtension(files[0].FileName);
+                        using (var fileStream = new FileStream(Path.Combine(upLoad, fileName + extension), FileMode.Create))
+                        {
+                            files[i].CopyTo(fileStream);
+                        }
+
+                        if (i == 0)
+                        {
+                            productoVM.Producto.ImagenUrl = fileName + extension;
+                        }
+                        if (i == 1)
+                        {
+                            productoVM.Producto.ImagenUrlDos = fileName + extension;
+                        }
+                        if (i == 2)
+                        {
+                            productoVM.Producto.ImagenUrlTres = fileName + extension;
+                        }
                     }
-                    productoVM.Producto.ImagenUrl = fileName + extension;
                     await _unidadTrabajo.Producto.Add(productoVM.Producto);
+
                 }
                 else
                 {
                     //Actualizar
-                    var objProducto = await _unidadTrabajo.Producto.GetFirst(p=>p.Id == productoVM.Producto.Id, isTracking: false);
-                    if (files.Count>0) //Se carga imagen
+                    var objProducto = await _unidadTrabajo.Producto.GetFirst(p => p.Id == productoVM.Producto.Id, isTracking: false);
+                    if (files.Count >= 3)
                     {
-                        string upload = webRootPath+DS.ImagenRut;
-                        string fileName = Guid.NewGuid().ToString();
-                        string extension = Path.GetExtension(files[0].FileName);
+                        //Borrar las imagenes anteriores;
 
-                        //Borrar anterior
-                        var anteriorFile = Path.Combine(upload, objProducto.ImagenUrl);
-                        if(System.IO.File.Exists(anteriorFile)) //Mnejar archivos del sistema
+                        string upLoad = webRootPath + DS.ImagenRut;
+                        BorrarArchivo(upLoad, objProducto.ImagenUrl);
+                        BorrarArchivo(upLoad, objProducto.ImagenUrlDos);
+                        BorrarArchivo(upLoad, objProducto.ImagenUrlTres);
+
+                        for (int i = 0; i < 3; i++)
                         {
-                            System.IO.File.Delete(anteriorFile);
+
+                            string fileName = Guid.NewGuid().ToString();
+                            string extension = Path.GetExtension(files[i].FileName);
+                            using (var fileStream = new FileStream(Path.Combine(upLoad, fileName + extension), FileMode.Create))
+                            {
+                                files[i].CopyTo(fileStream);
+                            }
+
+                            // Asignar las URLs de las imágenes al producto
+                            if (i == 0)
+                            {
+                                productoVM.Producto.ImagenUrl = fileName + extension;
+                            }
+                            else if (i == 1)
+                            {
+                                productoVM.Producto.ImagenUrlDos = fileName + extension;
+                            }
+                            else if (i == 2)
+                            {
+                                productoVM.Producto.ImagenUrlTres = fileName + extension;
+                            }
                         }
-                        using (var fileSrteam = new FileStream(Path.Combine(upload, fileName + extension), FileMode.Create))
-                        {
-                            files[0].CopyTo(fileSrteam);
-                        }
-                        productoVM.Producto.ImagenUrl = fileName + extension;
                     } //Caso que no cambie imagen
 
                     else
@@ -123,7 +155,15 @@ namespace SistemaStock.Areas.Admin.Controllers
         }
 
 
-
+        //Metodo privado para Borrar imagenes 
+        private void BorrarArchivo(string directorio, string archivo)
+        {
+            string rutaArchivo = Path.Combine(directorio, archivo);
+            if (System.IO.File.Exists(rutaArchivo))
+            {
+                System.IO.File.Delete(rutaArchivo);
+            }
+        }
 
 
         #region

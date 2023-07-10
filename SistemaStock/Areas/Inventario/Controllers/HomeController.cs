@@ -23,6 +23,8 @@ namespace SistemaStock.Areas.Inventario.Controllers
             _unidadTrabajo = unidadTrabajo;
 
         }
+
+        //Ver como arreglar
         public async Task<IActionResult> Index()
         {
             Api cotizacion = new Api();
