@@ -25,18 +25,19 @@ namespace SistemaStock.Areas.Inventario.Controllers
         }
 
         //Ver como arreglar
-        public async Task<IActionResult> Index()
+        public  async Task<IActionResult> Index()
         {
-            Api cotizacion = new Api();
-            string resultado = cotizacion.GetCotizacion("2754ab043aeb1bd0702bf8d166baf836");
-            var retornoCotizacion = JsonConvert.DeserializeObject<Cotizacion>(resultado).Quotes["USDUYU"];
-            ViewData["Cotizacion"] = retornoCotizacion;
 
-            return View(retornoCotizacion);
+
+            return View();
         }
         public async Task<IActionResult> Privacy()
         {
             IEnumerable<Producto> productoLista =  await _unidadTrabajo.Producto.GetAll();
+            Api cotizacion = new Api();
+            string resultado = cotizacion.GetCotizacion("2754ab043aeb1bd0702bf8d166baf836");
+            var retornoCotizacion = JsonConvert.DeserializeObject<Cotizacion>(resultado).Quotes["USDUYU"];
+            ViewData["Cotizacion"] = retornoCotizacion;
             return View(productoLista);
         }
 

@@ -13,19 +13,34 @@
             Nuestros productos....
         </div>
     </div>
+
+
 </header>
+
 
 
 <section>
     <div class="container my-2">
-        <div class="colcol-lg-6 col-md-6 col-sm-6 d-flex">
+        <div class="col-lg-4 col-md-6 col-sm-6 d-flex">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Buscar...." aria-label="Buscar" aria-describedby="button-addon2" />
-                <button class="btn btn-outline-primary">
+                <button class="btn btn-outline-dark">
                     <i class="bi bi-search"></i>
                 </button>
+
             </div>
+
         </div>
+        <div class="ms-2">
+            <span>Cotizacion del dia <strong> @ViewData["Cotizacion"]</strong></span>
+            <a class="text-decoration-none " asp-controller="Home" asp-action="Privacy">
+                <i class="bi bi-gear btn btn-outline-dark"></i>
+            </a>
+        </div>
+    </div>
+
+
+        
         
         <div class="row">
             @foreach (var producto in Model)

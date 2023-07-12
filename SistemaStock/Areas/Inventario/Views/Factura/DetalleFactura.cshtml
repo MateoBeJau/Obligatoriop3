@@ -1,10 +1,11 @@
 ﻿@model SistemaStock.Modelos.ViewModels.FacturaVM
-
+@using SistemaStock.Utilidades
 
 @{
     ViewData["Title"] = "DetalleFactura";
     Layout = "~/Views/Shared/_Layout.cshtml";
     double total = 0;
+    double cotizacion = Convert.ToDouble(@ViewData["Cotizacion"]);
 }
 
 <div class="card-header bg-dark text-light row container">
@@ -102,7 +103,7 @@
                         
                         @if (item.Producto.Moneda)
                         {
-                            total = total + (item.Cantidad * item.Producto.Costo); //Cargar luego la api de cotizaciones
+                            total = total + (item.Cantidad * (item.Producto.Costo*@cotizacion)); //Cargar luego la api de cotizaciones
                         }
                         else
                         {

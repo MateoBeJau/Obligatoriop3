@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using SistemaStock.AccesoDatos.Repositorio.IRepositorio;
 using SistemaStock.Modelos;
 using SistemaStock.Modelos.ViewModels;
@@ -67,6 +68,11 @@ namespace SistemaStock.Areas.Inventario.Controllers
 
         public async Task<IActionResult> DetalleFactura (int id)
         {
+            Api cotizacion = new Api();
+            string resultado = cotizacion.GetCotizacion("2754ab043aeb1bd0702bf8d166baf836");
+            var retornoCotizacion = JsonConvert.DeserializeObject<Cotizacion>(resultado).Quotes["USDUYU"];
+            ViewData["Cotizacion"] = retornoCotizacion;
+
             facturaVM = new FacturaVM();
             facturaVM.Factura = await _unidadTrabajo.Factura.GetFirst(i => i.Id == id, incluirPropiedades: "Economato");
             facturaVM.LineaFacturas = await _unidadTrabajo.LineaFactura.GetAll(d => d.FacturaId == id, 
@@ -80,6 +86,8 @@ namespace SistemaStock.Areas.Inventario.Controllers
 
         public async Task<IActionResult> DetalleFactura(int FacturaId, int productoId, int cantidadId)
         {
+
+
             facturaVM = new FacturaVM();
             facturaVM.Factura = await _unidadTrabajo.Factura.GetFirst(f => f.Id == FacturaId);
             var economatoProducto = await _unidadTrabajo.EconomatoProducto.GetFirst(e => e.ProductoId == productoId &&
