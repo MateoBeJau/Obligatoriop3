@@ -1,0 +1,169 @@
+﻿@model SistemaStock.Modelos.ViewModels.FacturaVM
+@using SistemaStock.Utilidades
+
+@{
+    ViewData["Title"] = "DetalleFactura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    double total = 0;
+    double cotizacion = Convert.ToDouble(@ViewData["Cotizacion"]);
+}
+
+<div class="card-header bg-dark text-light row container">
+    <div class="col-6">
+        Agregar Factura Venta
+    </div>
+    <div class="col-6 text-end">
+        <a asp-action="Index" class="text-white"> Salir</a>
+    </div>
+</div>
+
+
+<div class="container p-2">
+    <form method="post">
+        <input asp-for="Factura.Id" id="facturaId" name="FacturaId" hidden />
+
+        <div class="form-group mb-4">
+            <label>Valija</label>
+            <input asp-for="Factura.Economato.Nombre" class="form-control" disabled />
+        </div>
+
+        <div class="row mb-2">
+            <div class="form-group col-md-3">
+                <label class="text-primary">Agregar detalle factura </label>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="form-group col-md-6 mb-2">
+                <select id="productoId" name="productoId" class="form-select">
+                </select>
+            </div>
+
+            <div class="form-group col-md-2 mb-1">
+                <input class="form-control text-end" id="cantidadId" name="cantidadId" placeholder="Cantidad" type="number" min="1" />
+            </div>
+
+
+            <div class="form-group col-md-2 mb1">
+                <button class="btn btn-primary" onfocus="false" type="submit" id="btnAgergar">
+                    Agregar
+                </button>
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <table class="table table-striped border">
+        <thead class="thead-dark">
+            <tr class="table-secondary thead-dark">
+                <th>Producto</th>
+                <th>Marca</th>
+                <th>Moneda</th>
+                <th>Costo</th>
+                <th>Cantidad</th>
+
+            </tr>
+        </thead>
+        <thbody>
+            @foreach (var item in Model.LineaFacturas)
+            {
+                <tr>
+                    <td><strong>@Html.DisplayFor(d=>item.Producto.Descripcion)</strong></td>
+
+
+                    <td>@Html.DisplayFor(d=>item.Producto.Marca.Nombre)</td>
+
+
+                    <td>
+                        @if (item.Producto.Moneda)
+                        {
+                            <span>USD</span>
+                        }
+                        else
+                        {
+                            <span>UYU</span>
+                        }
+                    </td>
+
+                    <td>@Html.DisplayFor(d=>item.Producto.Costo)</td>
+
+                    <td>@Html.DisplayFor(d=>item.Cantidad)</td>
+
+                </tr>
+            }
+        </thbody>
+        <tfoot>
+            <tr>
+                <th>
+                    Total Factura:
+                    @foreach (var item in Model.LineaFacturas)
+                    {
+
+                        @if (item.Producto.Moneda)
+                        {
+                            total = total + (item.Cantidad * (item.Producto.Costo * @cotizacion)); //Cargar luego la api de cotizaciones
+                        }
+                        else
+                        {
+                            total = total + (item.Cantidad * item.Producto.Costo);
+                        }
+
+                    }
+                    @total
+
+                </th>
+
+            </tr>
+        </tfoot>
+    </table>
+
+    @if (Model.LineaFacturas.Count() > 0)
+    {
+        <div class="align-content-lg-center">
+            <div class="col-2">
+                <a class="btn btn-warning form-control" asp-action="GenerarFacturaVenta" asp-route-id="@Model.Factura.Id">Cargar factura venta</a>
+            </div>
+        </div>
+
+    }
+</div>
+
+@*Codigo js para el select2*@
+
+
+@section Scripts {
+
+    <script>
+        // Select 2
+        $("#productoId").select2({
+            placeholder: "Seleccionar Producto",
+            allowClear: true,
+            theme: "bootstrap-5",
+            ajax: {
+                url: "/inventario/factura/BuscarProducto",
+                contentType: "application/json; charset=utf-8",
+                data: function (params) {
+                    var query =
+                    {
+                        term: params.term
+                    };
+                    return query;
+                },
+                processResults: function (result) {
+                    return {
+                        results: $.map(result, function (item) {
+                            return {
+                                id: item.id,
+                                text: item.numeroProducto + ' ' + item.descripcion
+                            };
+                        })
+                    };
+                }
+            }
+        });
+
+    </script>
+
+}

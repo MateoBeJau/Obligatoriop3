@@ -25,7 +25,7 @@ namespace SistemaStock.Areas.Inventario.Controllers
         }
 
         //Ver como arreglar
-        public  async Task<IActionResult> Index()
+        public  IActionResult Index()
         {
 
 

@@ -224,6 +224,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW52ZW50YXJpb1xWaWV3c1xGYWN0dXJhXERldGFsbGVGYWN0dXJhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/mateo/Desktop/Obligatorio/SistemaStock/SistemaStock/Areas/Inventario/Views/Factura/DetalleFacturaVenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW52ZW50YXJpb1xWaWV3c1xGYWN0dXJhXERldGFsbGVGYWN0dXJhVmVudGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/mateo/Desktop/Obligatorio/SistemaStock/SistemaStock/Areas/Inventario/Views/Factura/FacturaVenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW52ZW50YXJpb1xWaWV3c1xGYWN0dXJhXEZhY3R1cmFWZW50YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/mateo/Desktop/Obligatorio/SistemaStock/SistemaStock/Areas/Inventario/Views/Factura/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSW52ZW50YXJpb1xWaWV3c1xGYWN0dXJhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
